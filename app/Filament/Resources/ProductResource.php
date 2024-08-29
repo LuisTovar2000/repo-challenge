@@ -100,7 +100,7 @@ class ProductResource extends Resource
                         ->send();
                 })
                 ->requiresConfirmation()
-                ->visible(fn () => auth()->user()->role === 'buyer'), // Solo compradores pueden comprar
+                //->visible(fn () => auth()->user()->role === 'buyer'), // Solo compradores pueden comprar
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
